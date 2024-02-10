@@ -24,7 +24,7 @@ void GameManager::setup()
     managers.push_back(std::shared_ptr<Manager>(new RenderManagerConsole));
 
     for (const auto& manager : managers) {
-        manager->setup(grid); // Supposant que chaque manager implémente cette méthode
+        manager->setup(rows, cols); // Supposant que chaque manager implémente cette méthode
     }
 
 }
@@ -53,7 +53,7 @@ void GameManager::game()
         }
 
         // Optionnel : Calcul et affichage du FPS réel
-        auto actualFrameDuration = duration_cast<milliseconds>(high_resolution_clock::now() - frameStart);
-        std::cout << "Frame Time: " << actualFrameDuration.count() << " ms (" << 1000.0 / actualFrameDuration.count() << " FPS)\n";
+        //auto actualFrameDuration = duration_cast<milliseconds>(high_resolution_clock::now() - frameStart);
+        //std::cout << "Frame Time: " << actualFrameDuration.count() << " ms (" << 1000.0 / actualFrameDuration.count() << " FPS)\n";
     }
 }
