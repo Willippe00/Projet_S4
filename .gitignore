@@ -1,0 +1,83 @@
+# Ignore les fichiers binaires et exécutables
+*.exe
+*.out
+*.app
+
+# Ignore les fichiers objets
+*.o
+*.obj
+
+# Ignore les fichiers de dépendances générés par le compilateur
+*.d
+
+# Ignore les fichiers de configuration générés par CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CMakeSettings.json
+
+# Ignore les fichiers de compilation générés par Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.vcxproj*
+*.vcproj*
+
+# Ignore les fichiers de génération de documentation
+Doxyfile
+doc/
+
+# Ignore les fichiers de sauvegarde
+*~
+*.bak
+*.swp
+
+# Ignore les fichiers de compilation générés par Make
+Makefile
+GNUmakefile
+
+# Ignore les fichiers de compilation générés par Code::Blocks
+*.depend
+*.layout
+*.cbp
+
+# Ignore les fichiers de compilation générés par Xcode
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+*.xcuserdatad
+*.hmap
+
+# Ignore les fichiers de compilation générés par Eclipse
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Ignore les fichiers de compilation générés par NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Ignore les fichiers de compilation générés par CLion
+.cmake/
+.idea/
+*.iml
+*.iws
+out/
+cmake-build-*/
+
+# Ignore les fichiers de compilation générés par Visual Studio Code
+.vscode/
+
+*.bin
