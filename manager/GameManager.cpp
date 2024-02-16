@@ -24,7 +24,7 @@ void GameManager::setup()
     managers.push_back(std::shared_ptr<Manager>(new RenderManagerConsole));
 
     for (const auto& manager : managers) {
-        manager->setup(rows, cols, grid); // Supposant que chaque manager implémente cette méthode
+        manager->setup(rows, cols, grid, acteurs); // Supposant que chaque manager implémente cette méthode
     }
 
 }
@@ -40,7 +40,7 @@ void GameManager::game()
 
         // logic start
         for (const auto& manager : managers) {
-            manager->update(grid); // Supposant que chaque manager implémente cette méthode
+            manager->update(grid, acteurs); // Supposant que chaque manager implémente cette méthode
         }
         //logic end
 

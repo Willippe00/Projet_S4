@@ -15,11 +15,11 @@ class Acteur {
 
     virtual int getId();
 
-    virtual float getposX();
-    virtual float  getposY();
+    virtual float getposX()=0;
+    virtual float  getposY()=0;
 
-    virtual void setup();
-    virtual void update();
+    virtual void setup()=0;
+    virtual void update()=0;
 
 };
 

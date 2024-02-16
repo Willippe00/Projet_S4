@@ -13,4 +13,8 @@ add_executable(Projet_S4 main.cpp
         manager/Acteur/ActeurManager.cpp
         manager/Acteur/ActeurManager.h
         manager/Render/RenderManagerConsole.cpp
-        manager/Render/RenderManagerConsole.h)
+        manager/Render/RenderManagerConsole.h
+        manager/Acteur/Acteur.cpp
+        manager/Acteur/Acteur.h
+        manager/Acteur/Player.cpp
+        manager/Acteur/Player.h)

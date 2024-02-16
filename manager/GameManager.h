@@ -25,7 +25,7 @@ private:
     Manager* firstManager; // Premier manager dans la chaîne
 
     std::vector<std::shared_ptr<Manager>> managers;
-    std::vector<Acteur> acteurs;
+    std::vector<std::shared_ptr<Acteur>> acteurs;
 
 
 public:

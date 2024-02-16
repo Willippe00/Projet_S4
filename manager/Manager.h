@@ -9,12 +9,13 @@
 #include "Acteur/Acteur.h"
 
 #include <vector>
+#include <memory>
 
 class Manager {
 public:
     // Méthode update virtuelle pure, à implémenter par les sous-classes
-    virtual void setup(int rows, int cols, char** grid, std::vector<Acteur> acteurs;) = 0;
-    virtual void update(char** grid, std::vector<Acteur> acteurs;) = 0;
+    virtual void setup(int rows, int cols, char** grid, std::vector<std::shared_ptr<Acteur>> acteurs) = 0;
+    virtual void update(char** grid, std::vector<std::shared_ptr<Acteur>> acteurs) = 0;
 };
 
 
