@@ -8,7 +8,7 @@
 
 class ActeurManager : public Manager{
 
-void setup(int rows, int cols) override;
+void setup(int rows, int cols, char** grid) override;
 void update(char **grid) override;
 
 };

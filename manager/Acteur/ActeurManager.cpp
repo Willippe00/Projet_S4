@@ -4,7 +4,7 @@
 
 #include "ActeurManager.h"
 
-void ActeurManager::setup(int rows, int cols)
+void ActeurManager::setup(int rows, int cols, char** grid)
 {
     std::cout << "ActeurManager setup" << std::endl;
 

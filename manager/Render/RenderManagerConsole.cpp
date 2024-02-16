@@ -4,7 +4,7 @@
 
 #include "RenderManagerConsole.h"
 
-void RenderManagerConsole::setup(int Rows, int Cols)
+void RenderManagerConsole::setup(int Rows, int Cols, char** grid)
 {
     std::cout << "RenderManagerConsole setup" << std::endl;
     rows = Rows;

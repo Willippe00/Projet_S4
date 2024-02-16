@@ -14,7 +14,7 @@ void MapManager::update(char **grid)
     }
 }
 
-void MapManager::setup(int rows, int cols)
+void MapManager::setup(int rows, int cols, char** grid)
 {
     Rows = rows;
     Cols = cols;

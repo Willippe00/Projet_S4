@@ -10,7 +10,7 @@ class RenderManagerConsole : public Manager {
     int rows;
     int cols;
 
-    void setup(int Rows, int Cols) override;
+    void setup(int rows, int cols, char** grid) override;
     void update(char **grid) override;
 
 };

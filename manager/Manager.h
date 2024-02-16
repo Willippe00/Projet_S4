@@ -9,7 +9,7 @@
 class Manager {
 public:
     // Méthode update virtuelle pure, à implémenter par les sous-classes
-    virtual void setup(int rows, int cols) = 0;
+    virtual void setup(int rows, int cols, char** grid) = 0;
     virtual void update(char** grid) = 0;
 };
 
