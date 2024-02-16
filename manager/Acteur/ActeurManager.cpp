@@ -4,13 +4,13 @@
 
 #include "ActeurManager.h"
 
-void ActeurManager::setup(int rows, int cols, char** grid)
+void ActeurManager::setup(int rows, int cols, char** grid, std::vector<Acteur> acteurs;)
 {
     std::cout << "ActeurManager setup" << std::endl;
 
 }
 
-void ActeurManager::update(char **grid)
+void ActeurManager::update(char **grid, std::vector<Acteur> acteurs;)
 {
     std::cout << "ActeurManager update" << std::endl;
 

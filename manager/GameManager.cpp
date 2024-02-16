@@ -24,7 +24,7 @@ void GameManager::setup()
     managers.push_back(std::shared_ptr<Manager>(new RenderManagerConsole));
 
     for (const auto& manager : managers) {
-        manager->setup(rows, cols); // Supposant que chaque manager implémente cette méthode
+        manager->setup(rows, cols, grid); // Supposant que chaque manager implémente cette méthode
     }
 
 }

@@ -4,14 +4,14 @@
 
 #include "RenderManagerConsole.h"
 
-void RenderManagerConsole::setup(int Rows, int Cols, char** grid)
+void RenderManagerConsole::setup(int Rows, int Cols, char** grid, std::vector<Acteur> acteurs;)
 {
     std::cout << "RenderManagerConsole setup" << std::endl;
     rows = Rows;
     cols = Cols;
 }
 
-void RenderManagerConsole::update(char **grid)
+void RenderManagerConsole::update(char **grid, std::vector<Acteur> acteurs;)
 {
 
     std::cout << "RenderManagerConsole update" << std::endl;

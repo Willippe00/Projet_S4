@@ -4,7 +4,7 @@
 
 #include "MapManager.h"
 
-void MapManager::update(char **grid)
+void MapManager::update(char **grid, std::vector<Acteur> acteurs;)
 {
     std::cout << "MapManager update" << std::endl;
     for (int i = 0; i < Rows; ++i) {
@@ -14,7 +14,7 @@ void MapManager::update(char **grid)
     }
 }
 
-void MapManager::setup(int rows, int cols, char** grid)
+void MapManager::setup(int rows, int cols, char** grid, std::vector<Acteur> acteurs;)
 {
     Rows = rows;
     Cols = cols;

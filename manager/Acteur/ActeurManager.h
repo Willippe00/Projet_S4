@@ -8,8 +8,8 @@
 
 class ActeurManager : public Manager{
 
-void setup(int rows, int cols, char** grid) override;
-void update(char **grid) override;
+void setup(int rows, int cols, char** grid, std::vector<Acteur> acteurs;) override;
+void update(char **grid, std::vector<Acteur> acteurs;) override;
 
 };
 

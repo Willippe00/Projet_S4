@@ -16,6 +16,8 @@
 #include "Acteur/ActeurManager.h"
 #include "Render/RenderManagerConsole.h"
 
+#include "Acteur/Acteur.h"
+
 class GameManager {
 private:
     char** grid;
@@ -23,9 +25,7 @@ private:
     Manager* firstManager; // Premier manager dans la chaîne
 
     std::vector<std::shared_ptr<Manager>> managers;
-
-
-
+    std::vector<Acteur> acteurs;
 
 
 public:

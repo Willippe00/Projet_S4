@@ -12,8 +12,8 @@ class MapManager : public Manager{
 int Rows;
 int Cols;
     char** map;
-void setup(int rows, int cols, char** grid) override;
-void update(char **grid) override;
+void setup(int rows, int cols, char** grid, std::vector<Acteur> acteurs;) override;
+void update(char **grid, std::vector<Acteur> acteurs;) override;
 
 };
 
