@@ -5,6 +5,7 @@
 #ifndef PROJET_S4_ACTEURMANAGER_H
 #define PROJET_S4_ACTEURMANAGER_H
 #include "../Manager.h"
+#include "Player.h"
 
 class ActeurManager : public Manager{
 

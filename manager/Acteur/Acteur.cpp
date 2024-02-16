@@ -3,3 +3,9 @@
 //
 
 #include "Acteur.h"
+
+Acteur::Acteur(int Id)
+{
+    id =Id;
+}
+

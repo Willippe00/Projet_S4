@@ -8,6 +8,8 @@
 #include "Acteur.h"
 class Player: public Acteur{
 
+
+
     int getId() override;
 
     float getposX() override;
@@ -15,6 +17,11 @@ class Player: public Acteur{
 
     void setup() override;
     void update() override;
+
+
+    public:
+//Player();
+//Player(int id);
 
 };
 
