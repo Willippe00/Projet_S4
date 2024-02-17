@@ -5,12 +5,17 @@
 #ifndef PROJET_S4_ACTEUR_H
 #define PROJET_S4_ACTEUR_H
 
+
 #include "../../enum/direction.h"
+#include <random>
+#include <iostream>
+
 class Acteur {
 
 
     Acteur();
 
+  protected:
     float posX=0;
     float posY=0;
 

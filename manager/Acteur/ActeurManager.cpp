@@ -18,13 +18,21 @@ void ActeurManager::setup(int rows, int cols, char** grid, std::vector<std::shar
         Acteur* nouvel_acteur = new Robot(i);
         acteurs->push_back(std::shared_ptr<Acteur>(nouvel_acteur));
     }
-    std::cout << "Robots créés" << std::endl;
+    std::cout << "Robots cree" << std::endl;
 
     // Création d'un joueur
     Acteur* nouvel_acteur = new Player(7);
     acteurs->push_back(std::shared_ptr<Acteur>(nouvel_acteur));
 
-    std::cout << "Joueur créé" << std::endl;
+    std::cout << "Joueur cree" << std::endl;
+
+
+    for (size_t i = 0; i < acteurs->size(); ++i) {
+        acteurs->at(i)->setup(rows,cols,grid) ;
+        std::cout << acteurs->at(i)->getId() << std::endl;
+
+    }
+    std::cout << "Joueur setup" << std::endl;
 }
 
 void ActeurManager::update(char **grid, std::vector<std::shared_ptr<Acteur>>* acteurs)
