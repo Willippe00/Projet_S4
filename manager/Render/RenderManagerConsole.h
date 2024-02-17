@@ -5,7 +5,7 @@
 #ifndef PROJET_S4_RENDERMANAGERCONSOLE_H
 #define PROJET_S4_RENDERMANAGERCONSOLE_H
 #include "../Manager.h"
-#include <windows.h>
+
 
 class RenderManagerConsole : public Manager {
     int rows;
