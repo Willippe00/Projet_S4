@@ -13,9 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up MSVC
-        uses: microsoft/setup-msbuild@v1.0.0
+      - name: Set up CMake
+        uses: actions/setup-cmake@v1
+        with:
+          cmake-version: '3.21.0' # Remplacez par la version de CMake que vous utilisez
+
+      - name: Configure CMake
+        run: cmake -S . -B build
 
       - name: Build
-        run: |
-          msbuild /nologo /p:Configuration=Release /m
+        run: cmake --build build --config Release
