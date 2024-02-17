@@ -6,9 +6,9 @@
 
 
 
-void Player::setup() {
+void Player::setup(int rows, int cols,char** grid) {
 
 }
-void Player::update() {
+void Player::update(char** grid) {
 
 }

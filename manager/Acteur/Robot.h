@@ -14,8 +14,8 @@ class Robot : public Acteur{
 
 
 public:
-    void setup() override;
-    void update() override;
+    void setup(int rows, int cols,char** grid) override;
+    void update(char** grid) override;
     Robot(int Id) : Acteur(Id)
     {
 

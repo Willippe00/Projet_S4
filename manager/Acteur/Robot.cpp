@@ -6,9 +6,9 @@
 
 
 
-void Robot::setup() {
+void Robot::setup(int rows, int cols,char** grid) {
 
 }
-void Robot::update() {
+void Robot::update(char** grid) {
 
 }

@@ -14,8 +14,8 @@ class Player: public Acteur{
 
 
     public:
-    void setup() override;
-    void update() override;
+    void setup(int rows, int cols,char** grid) override;
+    void update(char** grid) override;
     Player(int Id) : Acteur(Id)
     {
 
