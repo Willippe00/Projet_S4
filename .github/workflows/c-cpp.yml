@@ -13,10 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up CMake
-        uses: actions/setup-cmake@v1
-        with:
-          cmake-version: '3.21.0' # Remplacez par la version de CMake que vous utilisez
+      - name: Install CMake
+        run: |
+          curl -LO https://github.com/Kitware/CMake/releases/download/v3.21.0/cmake-3.21.0-windows-x86_64.zip
+          Expand-Archive cmake-3.21.0-windows-x86_64.zip -DestinationPath C:\CMake
+          echo 'C:\CMake\bin' >> $env:Path
+          cmake --version
 
       - name: Configure CMake
         run: cmake -S . -B build
