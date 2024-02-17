@@ -6,6 +6,7 @@
 #define PROJET_S4_ACTEURMANAGER_H
 #include "../Manager.h"
 #include "Player.h"
+#include "Robot.h"
 
 class ActeurManager : public Manager{
 

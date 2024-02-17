@@ -9,14 +9,25 @@ void ActeurManager::setup(int rows, int cols, char** grid, std::vector<std::shar
 {
 
     std::cout << "ActeurManager setup" << std::endl;
+
+
+
     for (int i = 0; i < 7; ++i) {
-        // Création d'une instance de Acteur avec des valeurs arbitraires
-        //std::shared_ptr<Acteur> nouvel_acteur = new Player(i);
+        // création des 7 robot
+        Acteur* nouvel_acteur = new Robot(i);
 
 
-        // Ajout de l'acteur au vecteur acteurs
-        //acteurs.push_back(nouvel_acteur);
+        acteurs.push_back(std::shared_ptr<Acteur>(nouvel_acteur));
+
     }
+    std::cout << "robot créer" << std::endl;
+
+    Acteur* nouvel_acteur = new Player(7);
+
+    // Ajout de l'acteur au vecteur acteurs
+    acteurs.push_back(std::shared_ptr<Acteur>(nouvel_acteur));
+
+    std::cout << "player créer" << std::endl;
 
 }
 

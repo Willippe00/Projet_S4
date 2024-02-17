@@ -18,4 +18,6 @@ add_executable(Projet_S4 main.cpp
         manager/Acteur/Acteur.h
         manager/Acteur/Player.cpp
         manager/Acteur/Player.h
-        enum/direction.h)
+        enum/direction.h
+        manager/Acteur/Robot.cpp
+        manager/Acteur/Robot.h)

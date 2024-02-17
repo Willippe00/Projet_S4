@@ -10,18 +10,16 @@ class Player: public Acteur{
 
 
 
-    int getId() override;
-
-    float getposX() override;
-    float  getposY() override;
-
 
 
 
     public:
     void setup() override;
     void update() override;
+    Player(int Id) : Acteur(Id)
+    {
 
+    }
 
 };
 

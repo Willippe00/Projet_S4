@@ -16,15 +16,15 @@ class Acteur {
 
     int id;
 
-    virtual int getId()=0;
+     int getId();
 
-    virtual float getposX()=0;
-    virtual float  getposY()=0;
+     float getposX();
+     float  getposY();
 
 
 
-    Direction lasDirection;
-    Direction nextDirection;
+    Direction lasDirection = Direction::None;
+    Direction nextDirection = Direction::None;
 
    public:
     Acteur(int id);
