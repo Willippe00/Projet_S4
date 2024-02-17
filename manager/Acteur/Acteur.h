@@ -11,15 +11,12 @@ class Acteur {
 
     Acteur();
 
-    float posX;
-    float posY;
+    float posX=0;
+    float posY=0;
 
-    int id;
+    int id=0;
 
-     int getId();
 
-     float getposX();
-     float  getposY();
 
 
 
@@ -30,6 +27,10 @@ class Acteur {
     Acteur(int id);
     virtual void setup(int rows, int cols,char** grid)=0;
     virtual void update(char** grid)=0;
+    int getId();
+
+    float getposX();
+    float  getposY();
 
 };
 

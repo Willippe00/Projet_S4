@@ -19,12 +19,13 @@ void GameManager::setup()
     }
 
     // Création des instances et ajout au vecteur
+    // pour ajouter un manager a la frame ajouter le ici
     managers.push_back(std::shared_ptr<Manager>(new MapManager));
     managers.push_back(std::shared_ptr<Manager>(new ActeurManager));
     managers.push_back(std::shared_ptr<Manager>(new RenderManagerConsole));
 
     for (const auto& manager : managers) {
-        manager->setup(rows, cols, grid, acteurs); // Supposant que chaque manager implémente cette méthode
+        manager->setup(rows, cols, grid, &acteurs); // Supposant que chaque manager implémente cette méthode
     }
 
 }
@@ -35,12 +36,12 @@ void GameManager::game()
 
     auto frameDuration = milliseconds(1000) / 60; // Durée cible d'une frame à 60 FPS
 
-    while (true) { // Remplacez par votre condition de sortie de boucle
+    while (true) {
         auto frameStart = high_resolution_clock::now();
 
         // logic start
         for (const auto& manager : managers) {
-            manager->update(grid, acteurs); // Supposant que chaque manager implémente cette méthode
+            manager->update(grid, &acteurs); // Supposant que chaque manager implémente cette méthode
         }
         //logic end
 

@@ -5,33 +5,29 @@
 #include "ActeurManager.h"
 
 
-void ActeurManager::setup(int rows, int cols, char** grid, std::vector<std::shared_ptr<Acteur>> acteurs)
+void ActeurManager::setup(int rows, int cols, char** grid, std::vector<std::shared_ptr<Acteur>>* acteurs)
 {
 
     std::cout << "ActeurManager setup" << std::endl;
 
 
+    std::cout << "ActeurManager setup" << std::endl;
 
     for (int i = 0; i < 7; ++i) {
-        // création des 7 robot
+        // Création des 7 robots
         Acteur* nouvel_acteur = new Robot(i);
-
-
-        acteurs.push_back(std::shared_ptr<Acteur>(nouvel_acteur));
-
+        acteurs->push_back(std::shared_ptr<Acteur>(nouvel_acteur));
     }
-    std::cout << "robot créer" << std::endl;
+    std::cout << "Robots créés" << std::endl;
 
+    // Création d'un joueur
     Acteur* nouvel_acteur = new Player(7);
+    acteurs->push_back(std::shared_ptr<Acteur>(nouvel_acteur));
 
-    // Ajout de l'acteur au vecteur acteurs
-    acteurs.push_back(std::shared_ptr<Acteur>(nouvel_acteur));
-
-    std::cout << "player créer" << std::endl;
-
+    std::cout << "Joueur créé" << std::endl;
 }
 
-void ActeurManager::update(char **grid, std::vector<std::shared_ptr<Acteur>> acteurs)
+void ActeurManager::update(char **grid, std::vector<std::shared_ptr<Acteur>>* acteurs)
 {
     std::cout << "ActeurManager update" << std::endl;
 

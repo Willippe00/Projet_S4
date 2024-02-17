@@ -10,8 +10,8 @@
 
 class ActeurManager : public Manager{
 
-void setup(int rows, int cols, char** grid, std::vector<std::shared_ptr<Acteur>> acteurs) override;
-void update(char **grid, std::vector<std::shared_ptr<Acteur>> acteurs) override;
+void setup(int rows, int cols, char** grid, std::vector<std::shared_ptr<Acteur>>* acteurs) override;
+void update(char **grid, std::vector<std::shared_ptr<Acteur>>* acteurs) override;
 
 };
 
