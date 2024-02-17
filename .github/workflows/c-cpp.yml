@@ -17,8 +17,8 @@ jobs:
         run: |
           curl -LO https://github.com/Kitware/CMake/releases/download/v3.21.0/cmake-3.21.0-windows-x86_64.zip
           Expand-Archive cmake-3.21.0-windows-x86_64.zip -DestinationPath C:\CMake
-          echo 'C:\CMake\bin' >> $env:Path
-          cmake --version
+          echo 'Add-Content $env:Path "C:\CMake\bin"' | Out-File -FilePath $PROFILE -Append -Force
+          echo $env:Path
 
       - name: Configure CMake
         run: cmake -S . -B build
