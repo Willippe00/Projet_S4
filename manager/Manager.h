@@ -10,6 +10,8 @@
 
 #include <vector>
 #include <memory>
+#include <cmath>
+
 
 class Manager {
 public:
