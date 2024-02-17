@@ -7,14 +7,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Configure CMake
-        run: cmake -S . -B build
+      - name: Set up MSVC
+        uses: microsoft/setup-msbuild@v1.0.0
 
-      - name: Build project
-        run: cmake --build build --config Release
+      - name: Build
+        run: |
+          msbuild /nologo /p:Configuration=Release /m
