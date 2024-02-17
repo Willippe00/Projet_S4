@@ -1,4 +1,4 @@
-name: C/C++ with Make
+name: Build
 
 on:
   push:
@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Configure CMake
+        run: cmake -S . -B build
+
       - name: Build project
-        run: |
-          make
+        run: cmake --build build --config Release
