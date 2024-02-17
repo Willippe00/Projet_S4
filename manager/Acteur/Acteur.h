@@ -9,6 +9,8 @@
 #include "../../enum/direction.h"
 #include <random>
 #include <iostream>
+#include <algorithm>
+
 
 class Acteur {
 

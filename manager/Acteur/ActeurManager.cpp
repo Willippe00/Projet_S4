@@ -38,5 +38,11 @@ void ActeurManager::setup(int rows, int cols, char** grid, std::vector<std::shar
 void ActeurManager::update(char **grid, std::vector<std::shared_ptr<Acteur>>* acteurs)
 {
     std::cout << "ActeurManager update" << std::endl;
+    for (size_t i = 0; i < acteurs->size(); ++i) {
+        acteurs->at(i)->update(grid) ;
+        std::cout << acteurs->at(i)->getId() << std::endl;
+
+    }
+    std::cout << "Joueur update" << std::endl;
 
 }

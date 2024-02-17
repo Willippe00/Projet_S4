@@ -3,7 +3,7 @@
 int main() {
     std::cout << "start up!" << std::endl;
 
-    GameManager* jeu1 = new GameManager(26, 26);
+    GameManager* jeu1 = new GameManager(25, 25);
     jeu1 ->setup();
     jeu1 ->game();
 
