@@ -1,7 +1,10 @@
-name: Build
+name: C++ Build
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -13,12 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install CMake
-        run: |
-          curl -LO https://github.com/Kitware/CMake/releases/download/v3.21.0/cmake-3.21.0-windows-x86_64.zip
-          Expand-Archive cmake-3.21.0-windows-x86_64.zip -DestinationPath C:\CMake
-          echo 'Add-Content $env:Path "C:\CMake\bin"' | Out-File -FilePath $PROFILE -Append -Force
-          echo $env:Path
+      - name: Set up CMake
+        uses: actions/setup-cmake@v1
+        with:
+          cmake-version: '3.21.0' # Version of CMake to use
 
       - name: Configure CMake
         run: cmake -S . -B build
