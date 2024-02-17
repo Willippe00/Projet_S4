@@ -10,16 +10,14 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up CMake
-        uses: actions/setup-cmake@v1
-        with:
-          cmake-version: '3.21.0' # Version of CMake to use
+      - name: Install CMake
+        run: sudo apt-get update && sudo apt-get install -y cmake
 
       - name: Configure CMake
         run: cmake -S . -B build
