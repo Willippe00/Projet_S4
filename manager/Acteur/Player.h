@@ -15,13 +15,13 @@ class Player: public Acteur{
     float getposX() override;
     float  getposY() override;
 
-    void setup() override;
-    void update() override;
+
 
 
     public:
-//Player();
-//Player(int id);
+    void setup() override;
+    void update() override;
+
 
 };
 

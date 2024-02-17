@@ -9,11 +9,13 @@
 
 
 class MapManager : public Manager{
-int Rows;
-int Cols;
+    int Rows;
+    int Cols;
+
     char** map;
+
     void setup(int rows, int cols, char** grid, std::vector<std::shared_ptr<Acteur>> acteurs) override;
-void update(char **grid, std::vector<std::shared_ptr<Acteur>> acteurs) override;
+    void update(char **grid, std::vector<std::shared_ptr<Acteur>> acteurs) override;
 
 };
 

@@ -5,7 +5,7 @@
 #ifndef PROJET_S4_ACTEUR_H
 #define PROJET_S4_ACTEUR_H
 
-
+#include "../../enum/direction.h"
 class Acteur {
 
 
@@ -21,11 +21,15 @@ class Acteur {
     virtual float getposX()=0;
     virtual float  getposY()=0;
 
-    virtual void setup()=0;
-    virtual void update()=0;
+
+
+    Direction lasDirection;
+    Direction nextDirection;
 
    public:
     Acteur(int id);
+    virtual void setup()=0;
+    virtual void update()=0;
 
 };
 

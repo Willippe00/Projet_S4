@@ -17,4 +17,5 @@ add_executable(Projet_S4 main.cpp
         manager/Acteur/Acteur.cpp
         manager/Acteur/Acteur.h
         manager/Acteur/Player.cpp
-        manager/Acteur/Player.h)
+        manager/Acteur/Player.h
+        enum/direction.h)
