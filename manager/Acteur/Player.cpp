@@ -3,8 +3,8 @@
 //
 
 #include "Player.h"
-
-
+#include <windows.h>
+#include <conio.h>
 
 void Player::setup(int rows, int cols,char** grid)
 {
@@ -50,12 +50,23 @@ void Player::update(char** grid) { // need to be change ------------------------
         // La direction précédente est possible, donc on la garde
         nextDirection = currentDirection;
     } else {
-        // Choisir une nouvelle direction aléatoire parmi les directions possibles
-        std::random_device rd;
-        std::mt19937 gen(rd());
-        std::uniform_int_distribution<> dist(0, possibleDirections.size() - 1);
-        int randomIndex = dist(gen);
-        nextDirection = possibleDirections[randomIndex];
+//        // pull une nouvelle direction du clavier (w,a,s,d,aucune)
+
+        if (GetAsyncKeyState(VK_UP) & 0x8000) {
+            nextDirection = Direction::Up;
+        }
+        else if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
+            nextDirection = Direction::Left;
+        }
+        else if (GetAsyncKeyState(VK_DOWN) & 0x8000) {
+            nextDirection = Direction::Down;
+        }
+        else if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {
+            nextDirection = Direction::Right;
+        }
+        else{
+            nextDirection = Direction::None;
+        }
     }
 
     // Mettre à jour la position en fonction de la nouvelle direction
