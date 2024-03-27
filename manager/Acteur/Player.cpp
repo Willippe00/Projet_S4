@@ -50,7 +50,7 @@ void Player::update(char** grid) { // need to be change ------------------------
         // La direction précédente est possible, donc on la garde
         nextDirection = currentDirection;
     } else {
-//        // pull une nouvelle direction du clavier (w,a,s,d,aucune)
+//        // pull une nouvelle direction du clavier (fleches)
 
         if (GetAsyncKeyState(VK_UP) & 0x8000) {
             nextDirection = Direction::Up;
