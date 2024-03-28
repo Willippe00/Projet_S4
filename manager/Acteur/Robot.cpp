@@ -79,7 +79,7 @@ void Robot::setup(int rows, int cols,char** grid) {
             // Ne rien faire si la direction est None
             break;
     }
-
+    ApiManager::moveActor(this->id, posX, posY);
     // Mettre à jour la dernière direction
     lasDirection = nextDirection;
 
