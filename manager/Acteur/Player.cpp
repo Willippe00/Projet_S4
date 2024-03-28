@@ -92,6 +92,8 @@ void Player::update(char** grid) { // need to be change ------------------------
             break;
     }
 
+    ApiManager::movePlayer(this->id, posX, posY); // sending info to the API
+    ApiManager::setOrigin(posX, posY);
     // Mettre à jour la dernière direction
     lasDirection = nextDirection;
 

@@ -5,6 +5,7 @@
 #ifndef PROJET_S4_ROBOT_H
 #define PROJET_S4_ROBOT_H
 #include "Acteur.h"
+#include "../ApiManager.h"
 
 class Robot : public Acteur{
 
